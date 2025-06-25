@@ -142,15 +142,17 @@ form button:hover {
     <p>📧 minniesdaycare79@gmail.com</p>
 
     <h3>Inquiry / Registration Form</h3>
-  <form action="https://formspree.io/f/mqabggeo" method="post" style="max-width: 500px; margin-top: 1rem;">
+    <form action="https://formspree.io/f/mqabggeo" method="post" style="max-width: 500px; margin-top: 1rem;">
     <label for="parentName">Parent's Name:</label><br />
     <input type="text" id="parentName" name="parentName" required /><br /><br />
 
     <label for="childName">Child's Name:</label><br />
     <input type="text" id="childName" name="childName" required /><br /><br />
 
-    <label for="childAge">Child's Age:</label><br />
-    <input type="number" id="childAge" name="childAge" min="0" max="10" required /><br /><br />
+    <label for="childAge">Child's Age (Years):</label><br />
+    <input type="number" id="childAge" name="childAge" min="0" max="12" required /><br /><br />
+    <label for="InfantAge">Infants's Age (Months):</label><br />
+    <input type="number" id="InfantAge" name="InfantAge" min="0" max="11" required /><br /><br />
 
     <label for="email">Email:</label><br />
     <input type="email" id="email" name="email" required /><br /><br />
@@ -160,11 +162,10 @@ form button:hover {
 
     <button type="submit">Submit</button>
 
-	<form action="https://formspree.io/f/abcxyz123" method="POST" style="max-width: 500px; margin-top: 1rem;">
-	  <!-- Redirect to Thank You page -->
-	  <input type="hidden" name="_redirect" value="thank-you.html">
-
-	  <!-- The rest of your form fields... -->
+    <form action="https://formspree.io/f/mqabggeo" method="POST" style="max-width: 500px; margin-top: 1rem;">
+     <!-- Redirect to Thank You page -->
+     <input type="hidden" name="_redirect" value="thank-you.html">
+     <!-- The rest of your form fields... -->
 
   </form>
   </section>
