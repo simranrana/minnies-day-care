@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minnie's Day Care</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #ffb6c1;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #ffc0cb;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .services, .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      background: #ffb6c1;
+      color: white;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    form input, form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+form button:hover {
+  background-color: #ff85c1;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Minnie's Day Care</h1>
+    <p>Safe, Fun & Educational Care for Your Little Ones</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>At Minnie’s Day Care, we provide a loving and stimulating environment where children can learn, play, and grow. With trained staff and age-appropriate activities, we make early childhood a delightful experience.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Infant Care</h3>
+        <p>Gentle care and nurturing for babies 6 weeks and up.</p>
+      </div>
+      <div class="card">
+        <h3>Toddler Program</h3>
+        <p>Engaging activities designed to support early development.</p>
+      </div>
+      <div class="card">
+        <h3>Preschool Curriculum</h3>
+        <p>Fun and educational activities to prepare your child for school.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x200?text=Play+Time" alt="Play Time" />
+      <img src="https://via.placeholder.com/300x200?text=Learning+Fun" alt="Learning Fun" />
+      <img src="https://via.placeholder.com/300x200?text=Outdoor+Play" alt="Outdoor Play" />
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📍 18146 Camdenhurst Dr, Gainesville, VA 20155</p>
+    <p>📞 (571)528-7232</p>
+    <p>📧 minniesdaycare79@gmail.com</p>
+
+    <h3>Inquiry / Registration Form</h3>
+    <form action="https://formspree.io/f/mqabggeo" method="post" style="max-width: 500px; margin-top: 1rem;">
+    <label for="parentName">Parent's Name:</label><br />
+    <input type="text" id="parentName" name="parentName" required /><br /><br />
+
+    <label for="childName">Child's Name:</label><br />
+    <input type="text" id="childName" name="childName" required /><br /><br />
+
+    <label for="childAge">Child's Age (Years):</label><br />
+    <input type="number" id="childAge" name="childAge" min="0" max="12" required /><br /><br />
+    <label for="InfantAge">Infants's Age (Months):</label><br />
+    <input type="number" id="InfantAge" name="InfantAge" min="0" max="11" required /><br /><br />
+
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" required /><br /><br />
+
+    <label for="message">Message:</label><br />
+    <textarea id="message" name="message" rows="4" required></textarea><br /><br />
+
+    <button type="submit">Submit</button>
+   
+  </form>
+
+ 
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Minnie's Day Care. All rights reserved.</p>
+  </footer>
+ <form action="https://formspree.io/f/mqabggeo" method="POST" style="max-width: 500px; margin-top: 1rem;">
+  <!-- Redirect to Thank You page -->
+  <input type="hidden" name="_redirect" value="thank-you.html">
+
+  <!-- The rest of your form fields... -->
+   </form>
+</body>
+</html>
