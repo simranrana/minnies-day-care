@@ -1,0 +1,42 @@
+#about {
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(145deg, #fff0f5, #e0f7fa);
+  color: #333;
+  padding: 2rem;
+  border-radius: 20px;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  position: relative;
+  overflow: hidden;
+}
+#about h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+#about::before {
+  content: "";
+  background: url('https://i.imgur.com/nG3hWIp.png') no-repeat center/cover;
+  opacity: 0.05;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+}
+#about p {
+  position: relative;
+  z-index: 1;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    At Minnie’s Day Care, we believe every child deserves a safe, nurturing, and joyful place to grow and thrive. Located in a warm and welcoming home environment, our licensed home day care provides personalized care with the comfort and security of a family setting.
+    We specialize in small group sizes, allowing us to give each child individual attention and support as they explore, play, and learn at their own pace. Our daily routine blends structured activities, free play, outdoor time, and age-appropriate learning to support early childhood development in a fun and engaging way.
+    With a focus on kindness, creativity, and confidence-building, Minnie’s Day Care is more than just child care — it’s a home away from home!
+  </p>
+</section>

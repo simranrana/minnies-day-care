@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: cursive;
       background-color: #fff8f0;
       color: #333;
     }
@@ -87,9 +87,27 @@ form button:hover {
   background-color: #ff85c1;
 }
 
-  </style>
+.enroll-banner {
+  background-color: #ff69b4;
+  color: white;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', cursive, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+
+</style>
 </head>
 <body>
+<div class="enroll-banner">
+  🎉 <strong><a href="#contact" style="color: white; text-decoration: underline;">Now Enrolling!</a></strong> Start date: <strong>August 1, 2025</strong> – Reserve your child's spot today!
+</div>
 
   <header>
 
@@ -113,13 +131,21 @@ form button:hover {
   </nav>
  
   <section id="about" style="font-family: cursive;">
-    <h2>About Us</h2>
-    <p>At Minnie’s Day Care, we believe every child deserves a safe, nurturing, and joyful place to grow and thrive. Located in a warm and welcoming home environment, our licensed home day care provides personalized care with the comfort and security of a family setting.
-		We specialize in small group sizes, allowing us to give each child individual attention and support as they explore, play, and learn at their own pace. Our daily routine blends structured activities, free play, outdoor time, and age-appropriate learning to support early childhood development in a fun and engaging way.
-		With a focus on kindness, creativity, and confidence-building, Minnie’s Day Care is more than just child care — it’s a home away from home!</p>
+    <h2>Few words from the Provider- Ms. Minnie R.</h2>
+    <p>Hello dear parent(s), </p>
+	 <p>Allow me to introduce myself. I’m a proud mother of two grown children and bring over 10 years of teaching experience in Fairfax and Prince William County Public Schools. </p>
+	 <p>I, personally is a strong believer that every child deserves a safe, nurturing, and joyful environment in which to grow and thrive. At Minnie’s Day Care, I offer a licensed home-based program that provides personalized care in a warm, welcoming, and family-like setting. I specialize in maintaining small group sizes, which allows me to give each child the individual attention and support they need as they play, explore, and learn at their own pace.
+		Our daily routine includes a balanced mix of structured activities, free play, outdoor time, and age-appropriate learning experiences — all designed to foster early childhood development in a fun and engaging way. With a strong focus on kindness, creativity, and confidence-building, I strive to help children grow into happy, capable, and compassionate individuals.</p>
+		
+	 <p>Let me assure you, Minnie’s Day Care is more than just child care — it’s a home away from home.!</p>
+	 
+	 <p> Thank you for taking the time to learn more about Minnie’s Day Care. I can’t wait to welcome your little one to Minnie’s Day Care — where every day is filled with fun, friendship, and discovery!</p>
+	
+	<h3> A few of my certifications : <h3>
+	
   </section>
 
-  <section id="services" >
+  <section id="services" style="font-family: cursive;" >
     <h2>Our Services</h2>
     <div class="services">
       <div class="card">
@@ -137,16 +163,10 @@ form button:hover {
     </div>
   </section>
   
-  <section id="programs" style="max-width: 700px; margin: auto; padding: 2rem; font-family: cursive;">
+  <section id="programs" style="max-width: 700px; margin: left; padding: 2rem; font-family: cursive;">
   <h2 style="text-align: left;">Our Programs</h2>
-
-  <!-- Toggle Button -->
-  <div onclick="toggleSection('toddler')" style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem; background-color: #ffe4ec; padding: 1rem; border-radius: 10px; transition: 0.3s;">
-    <span style="font-size: 1.2rem;">🧸 <strong>Toddler Program</strong> (18 months – 3 years)</span>
-    <span id="arrow-toddler" style="margin-left: auto; transition: transform 0.3s;">▼</span>
-  </div>
-
-	  <!-- INFANT PROGRAM -->
+ 
+ <!-- INFANT PROGRAM -->
 	<div onclick="toggleSection('infant')" style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem; background-color: #e6f7ff; padding: 1rem; border-radius: 10px; transition: 0.3s; margin-top: 1.5rem;">
 	  <span style="font-size: 1.2rem;">👶 <strong>Infant Care</strong> (6 weeks – 18 months)</span>
 	  <span id="arrow-infant" style="margin-left: auto; transition: transform 0.3s;">▼</span>
@@ -165,8 +185,15 @@ form button:hover {
 
 	  <p>Our small-group setting ensures that your little one receives close attention and consistent caregivers—just like home.</p>
 	</div> 
+	
+<!-- TODDLER PROGRAM -->	
+  <!-- Toggle Button -->
+  <div onclick="toggleSection('toddler')" style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem; background-color: #ffe4ec; padding: 1rem; border-radius: 10px; transition: 0.3s;">
+    <span style="font-size: 1.2rem;">🧸 <strong>Toddler Program</strong> (18 months – 3 years)</span>
+    <span id="arrow-toddler" style="margin-left: auto; transition: transform 0.3s;">▼</span>
+  </div>
 
-  <!-- TODDLER PROGRAM -->
+ 
   <!-- Hidden Content -->
   <div id="content-toddler" style="display: none; padding: 1rem; background-color: #fff0f5; margin-top: 0.5rem; border-radius: 10px;">
     <p>At Minnie’s Day Care, our toddler program is designed to meet the developmental needs of curious, energetic little explorers. This stage is all about discovery, communication, and gaining independence — and our program supports toddlers every step of the way in a safe, loving home environment.</p>
@@ -178,6 +205,27 @@ form button:hover {
       <li><strong>Social-Emotional Learning:</strong> Sharing, cooperation, and confidence-building</li>
     </ul>
   </div>
+  
+ <!-- PRESCHOOL CURRICULUM PROGRAM -->
+  <!-- Toggle Button -->
+  <div onclick="toggleSection('curriculum')" style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem; background-color: #0ae394; padding: 1rem; border-radius: 10px; transition: 0.3s;">
+    <span style="font-size: 1.2rem;">🧸 <strong>Preschool Curriculum Program</strong> (18 months – 3 years)</span>
+    <span id="arrow-curriculum" style="margin-left: auto; transition: transform 0.3s;">▼</span>
+  </div>
+  <!-- Hidden Content -->
+  <div id="content-curriculum" style="display: none; padding: 1rem; background-color: #0ae394; margin-top: 0.5rem; border-radius: 10px;">
+    <p>At Minnie’s Day Care, our toddler program is designed to meet the developmental needs of curious, energetic little explorers. This stage is all about discovery, communication, and gaining independence — and our program supports toddlers every step of the way in a safe, loving home environment.</p>
+    
+    <ul>
+      <li><strong>Circle Time:</strong> Songs, stories, weather, and simple routines</li>
+      <li><strong>Sensory & Creative Play:</strong> Hands-on activities and crafts</li>
+      <li><strong>Outdoor Exploration:</strong> Safe backyard time and physical play</li>
+      <li><strong>Social-Emotional Learning:</strong> Sharing, cooperation, and confidence-building</li>
+    </ul>
+  </div>
+
+
+
   
 
 </section>
@@ -238,7 +286,7 @@ form button:hover {
   </section>
 
   <footer>
-    <p>&copy; 2025 Minnie's Day Care. All rights reserved.</p>
+    <p>&copy; 2025 Minnie's Day Care.</p>
   </footer>
  <form action="https://formspree.io/f/mqabggeo" method="POST" style="max-width: 500px; margin-top: 1rem;">
   <!-- Redirect to Thank You page -->
