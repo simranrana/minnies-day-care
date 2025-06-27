@@ -136,6 +136,41 @@ form button:hover {
       </div>
     </div>
   </section>
+  
+  <section id="programs" style="max-width: 700px; margin: auto; padding: 2rem;">
+  <h2 style="text-align: center;">Our Programs</h2>
+
+  <!-- Toggle Button -->
+  <div onclick="toggleSection('toddler')" style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem; background-color: #ffe4ec; padding: 1rem; border-radius: 10px; transition: 0.3s;">
+    <span style="font-size: 1.2rem;">🧸 <strong>Toddler Program</strong> (18 months – 3 years)</span>
+    <span id="arrow-toddler" style="margin-left: auto; transition: transform 0.3s;">▼</span>
+  </div>
+
+  <!-- Hidden Content -->
+  <div id="content-toddler" style="display: none; padding: 1rem; background-color: #fff0f5; margin-top: 0.5rem; border-radius: 10px;">
+    <p>At Minnie’s Day Care, our toddler program is designed to meet the developmental needs of curious, energetic little explorers. This stage is all about discovery, communication, and gaining independence — and our program supports toddlers every step of the way in a safe, loving home environment.</p>
+    
+    <ul>
+      <li><strong>Circle Time:</strong> Songs, stories, weather, and simple routines</li>
+      <li><strong>Sensory & Creative Play:</strong> Hands-on activities and crafts</li>
+      <li><strong>Outdoor Exploration:</strong> Safe backyard time and physical play</li>
+      <li><strong>Social-Emotional Learning:</strong> Sharing, cooperation, and confidence-building</li>
+    </ul>
+  </div>
+</section>
+
+<script>
+  function toggleSection(id) {
+    const content = document.getElementById('content-' + id);
+    const arrow = document.getElementById('arrow-' + id);
+    const isVisible = content.style.display === 'block';
+
+    content.style.display = isVisible ? 'none' : 'block';
+    arrow.style.transform = isVisible ? 'rotate(0deg)' : 'rotate(180deg)';
+  }
+</script>
+
+
 
   <section id="gallery">
     <h2>Gallery</h2>
