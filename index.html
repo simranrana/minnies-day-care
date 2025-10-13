@@ -3,52 +3,210 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minnie's Home Day Care </title>
+  <title>Minnie's Home Day Care</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
+    /* ===== Base Styles ===== */
     body {
       margin: 0;
-      font-family: Brush Script;
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
       background-color: #fff8f0;
       color: #333;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #ffb6c1;
+      background: linear-gradient(90deg, #ffb6c1, #ff69b4);
       color: white;
-      padding: 1rem 2rem;
       text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header img.logo {
+      width: 450px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0.5rem 0 0;
+      font-size: 1.8rem;
+    }
+
+    header h2 {
+      margin: 0.3rem 0;
+      font-size: 1.3rem;
     }
 
     nav {
       background-color: #ffc0cb;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 2rem;
-      padding: 0.5rem;
+      padding: 0.75rem;
     }
 
     nav a {
       color: #fff;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #8b0000;
     }
 
     section {
-      padding: 2rem;
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .services, .gallery {
+    h2 {
+      color: #ff69b4;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    /* ===== Banner ===== */
+    .enroll-banner {
+      background-color: #ff69b4;
+      color: white;
+      text-align: center;
+      padding: 0.75rem 1rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .enroll-banner a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* ===== Cards ===== */
+    .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
     }
 
     .card {
       background: white;
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    /* ===== Gallery ===== */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== Parents Night Out ===== */
+    .nightout {
+      background: #fff0f5;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .nightout h3 {
+      color: #ff69b4;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .nightout p {
+      margin-bottom: 1rem;
+    }
+
+    .nightout ul {
+      list-style-type: '⭐ ';
+      padding-left: 1.5rem;
+      text-align: left;
+      display: inline-block;
+    }
+
+    .nightout button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+
+    .nightout button:hover {
+      background-color: #ff85c1;
+    }
+
+    /* ===== Contact Form ===== */
+    form {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    form button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    form button:hover {
+      background-color: #ff85c1;
     }
 
     footer {
@@ -59,90 +217,39 @@
       margin-top: 2rem;
     }
 
-    img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-
-    form input, form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  font-size: 1rem;
-}
-
-form button {
-  background-color: #ff69b4;
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-form button:hover {
-  background-color: #ff85c1;
-}
-
-.enroll-banner {
-  background-color: #ff69b4;
-  color: white;
-  text-align: center;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  font-weight: bold;
-  font-family: 'Segoe UI', Brush Script, sans-serif;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-
-</style>
+  </style>
 </head>
 <body>
-<div class="enroll-banner">
-  🎉 <strong><a href="#contact" style="color: white; text-decoration: underline;">Now Enrolling!</a></strong> – Reserve your child's spot today!
-</div>
+
+  <div class="enroll-banner">
+    🎉 <a href="#contact">Now Enrolling!</a> – Reserve your child's spot today!
+  </div>
 
   <header>
-
-   <img src="lOGO_NEW.png" alt="Minnie's Home Day Care  Logo" class="logo">
-	<h1>(State Licensed)</h1>
-    <h2>Inquiry / Registration Form </h2>
+    <img src="LOGO_NEW.png" alt="Minnie's Home Day Care Logo" class="logo">
+    <h1>Minnie's Home Day Care</h1>
+    <h2>(State Licensed)</h2>
     <p>Safe, Fun & Educational Care for Your Little Ones</p>
   </header>
 
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
+    <a href="#nightout">Parents’ Night Out</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
-  
-  <section id="about" style="font-family: Brush Script;">
-    <h2>About the Provider- Ms. Minnie</h2>
-    <p>Hello dear parent(s), </p>
-	 <p>I’m a proud mother of two and bring over 10 years of teaching experience in Fairfax and PWC Public Schools. At Minnie's Home Day Care, I provide a licensed, home-based program in a warm, nurturing setting where children feel safe and supported. With small group sizes, I’m able to offer personalized attention, helping each child grow at their own pace through play, exploration, and age-appropriate learning. Our daily routine blends structure, creativity, and outdoor time to foster confidence, kindness, and early development in a joyful way.</p>
-		
-	 <p>Let me assure you, Minnie's Home Day Care is more than just child care — it’s a home away from home.!</p>
-	 
-	 <p> Thank you for taking the time to learn more about Minnie's Home Day Care. I can’t wait to welcome your little one to Minnie's Home Day Care  — where every day is filled with fun, friendship, and discovery!</p>
-	
-	<h3> A few of my credentials:<h3>
-	<ul>
-      <li style="margin-bottom: 10px;"<strong>CPR & First Aid Certified.</strong> </li>
-      <li style="margin-bottom: 10px;"<strong>Medication Administration Training (MAT).</strong> </li>
-	  <li style="margin-bottom: 10px;"<strong>Behavior Management Training :</strong> Skilled in guiding positive behaviors and supporting emotional growth. </li>
-	  <li style="margin-bottom: 10px;"<strong>Sensory Development Training :</strong> Focused on creating engaging, age-appropriate sensory activities to support brain and motor skill development.</li>
-	</ul>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About the Provider – Ms. Minnie</h2>
+    <p>Hello dear parent(s),</p>
+    <p>I’m a proud mother of two and bring over 10 years of teaching experience in Fairfax and PWC Public Schools. At Minnie's Home Day Care, I provide a licensed, home-based program in a warm, nurturing setting where children feel safe and supported. With small group sizes, I offer personalized attention to help each child grow through play, exploration, and learning.</p>
+    <p>Let me assure you, Minnie's Home Day Care is more than just child care — it’s a home away from home!</p>
   </section>
 
-  <section id="services" style="font-family: Brush Script;" >
+  <!-- Services -->
+  <section id="services">
     <h2>Our Services</h2>
     <div class="services">
       <div class="card">
@@ -150,8 +257,8 @@ form button:hover {
         <p>Gentle care and nurturing for babies 12 weeks and up.</p>
       </div>
       <div class="card">
-        <h3>Toddler Program</h3> 
-        <p>At Minnie's Home Day Care , our toddler program is designed to meet the developmental needs of curious, energetic little explorers. This stage is all about discovery, communication, and gaining independence — and our program supports toddlers every step of the way in a safe, loving home environment.</p>
+        <h3>Toddler Program</h3>
+        <p>Exploration-based learning for active, curious toddlers in a safe, loving environment.</p>
       </div>
       <div class="card">
         <h3>Preschool Curriculum</h3>
@@ -159,132 +266,83 @@ form button:hover {
       </div>
     </div>
   </section>
-  
-  <section id="programs" style="max-width: 700px; margin: left; padding: 2rem; font-family: Brush Script;">
-  <h2 style="text-align: left;">Our Programs</h2>
- 
- <!-- INFANT PROGRAM -->
-	<div onclick="toggleSection('infant')" style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem; background-color: #e6f7ff; padding: 1rem; border-radius: 10px; transition: 0.3s; margin-top: 1.5rem;">
-	  <span style="font-size: 1.2rem;">👶 <strong>Infant Care</strong> (12 weeks – 18 months)</span>
-	  <span id="arrow-infant" style="margin-left: auto; transition: transform 0.3s;">▼</span>
-	</div>
 
-	<div id="content-infant" style="display: none; padding: 1rem; background-color: #f0fbff; margin-top: 0.5rem; border-radius: 10px;">
-	  <p>Our Infant Care program at Minnie's Home Day Care is built on trust, love, and gentle attention. We understand that infants need consistency, calm, and plenty of cuddles, and we create a nurturing home environment where your baby feels safe, secure, and cherished every day.</p>
-	  
-	  <ul>
-		<li><strong>Individualized Schedules:</strong> Feeding, naps, and playtime based on each baby’s unique rhythm</li>
-		<li><strong>Responsive Caregiving:</strong> Gentle one-on-one attention that builds trust and promotes healthy emotional development</li>
-		<li><strong>Developmental Play:</strong> Soft music, tummy time, visual tracking, and sensory toys to support motor and cognitive growth</li>
-		<li><strong>Daily Communication:</strong> Parents receive updates on feedings, naps, diapering, and milestones</li>
-		<li><strong>Safe Sleep Practices:</strong> Crib sleeping with supervision, following all state and AAP guidelines</li>
-	  </ul>
-
-	  <p>Our small-group setting ensures that your little one receives close attention and consistent caregivers—just like home.</p>
-	</div> 
-	
-<!-- TODDLER PROGRAM -->	
-  <!-- Toggle Button -->
-  <div onclick="toggleSection('toddler')" style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem; background-color: #ffe4ec; padding: 1rem; border-radius: 10px; transition: 0.3s;">
-    <span style="font-size: 1.2rem;">🧸 <strong>Toddler Program</strong> (18 months – 3 years)</span>
-    <span id="arrow-toddler" style="margin-left: auto; transition: transform 0.3s;">▼</span>
-  </div>
-
- 
-  <!-- Hidden Content -->
-  <div id="content-toddler" style="display: none; padding: 1rem; background-color: #fff0f5; margin-top: 0.5rem; border-radius: 10px;">
-    <p>At Minnie's Home Day Care , our toddler program is designed to meet the developmental needs of curious, energetic little explorers. This stage is all about discovery, communication, and gaining independence — and our program supports toddlers every step of the way in a safe, loving home environment.</p>
-    
-    <ul>
-      <li><strong>Circle Time:</strong> Songs, stories, weather, and simple routines</li>
-      <li><strong>Sensory & Creative Play:</strong> Hands-on activities and crafts</li>
-      <li><strong>Outdoor Exploration:</strong> Safe backyard time and physical play</li>
-      <li><strong>Social-Emotional Learning:</strong> Sharing, cooperation, and confidence-building</li>
-    </ul>
-  </div>
-
-
- <!-- PRESCHOOL CURRICULUM PROGRAM -->
-  <!-- Toggle Button -->
-    <div onclick="toggleSection('curriculum')" style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem; background-color: #0ae394; padding: 1rem; border-radius: 10px; transition: 0.3s;">
-    <span style="font-size: 1.2rem;">🧸 <strong>Preschool Curriculum Program</strong> (3 years to 5 years)</span>
-    <span id="arrow-curriculum" style="margin-left: auto; transition: transform 0.3s;">▼</span>
-  </div>
-  <!-- Hidden Content -->
-  <div id="content-curriculum" style="display: none; padding: 1rem; background-color: #0ae394; margin-top: 0.5rem; border-radius: 10px;"
-    <p>Our preschool curriculum is thoughtfully designed to prepare young learners for kindergarten and beyond, while nurturing creativity, independence, and a love for learning in a caring home environment.</p>
-    <ul>
-      <li><strong> Language & Literacy : </strong> Storytime & reading readiness , Letter recognition & phonics , Vocabulary building through songs, rhymes, and conversations.</li>
-      <li><strong>Early Math Concepts:</strong> Counting, sorting, and number recognition, Shapes, patterns, and simple measurements, Hands-on math games and activities.</li>
-      <li><strong>Creative Arts:</strong> Drawing, painting, and crafts, Music, rhythm and dance. </li>
-      <li><strong> Daily Circle Time:</strong> Calendar, Weather chart, Theme of the week, Songs, Show-and-tell & Group sharing.</li>
-    </ul>
-  </div>
-</section>
-
-<script>
-  function toggleSection(id) {
-    const content = document.getElementById('content-' + id);
-    const arrow = document.getElementById('arrow-' + id);
-    const isVisible = content.style.display === 'block';
-
-    content.style.display = isVisible ? 'none' : 'block';
-    arrow.style.transform = isVisible ? 'rotate(0deg)' : 'rotate(180deg)';
-  }
-</script>
-
-
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <img src="MinniesDayCare_Project\minnies-day-care\Pics\Group.JPEG" alt="Play Time" />
-      <img src="https://via.placeholder.com/300x200?text=Learning+Fun" alt="Learning Fun" />
-      <img src="https://via.placeholder.com/300x200?text=Outdoor+Play" alt="Outdoor Play" />
+  <!-- Parents' Night Out -->
+  <section id="nightout">
+    <h2>Parents’ Night Out</h2>
+    <div class="nightout">
+      <h3>Because parents deserve a break too!</h3>
+      <p>Enjoy a worry-free evening while your little ones have a night full of fun, games, and safe supervision at Minnie's Home Day Care!</p>
+      <ul>
+        <li>Available on select Friday or Saturday evenings</li>
+        <li>Fun-filled activities, storytime, and light snacks included</li>
+        <li>Safe, licensed home environment</li>
+        <li>Flexible timing — usually 6 PM to 10 PM</li>
+      </ul>
+      <p>Spaces are limited — reserve your spot early!</p>
+      <button onclick="window.location.href='#contact'">Contact to Reserve</button>
     </div>
   </section>
 
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="Pics/Group.JPEG" alt="Kids Group">
+      <img src="Pics/Converted/JasonPlay1.jpg" alt="Playtime">
+      <img src="Pics/Converted/BothPlay1.png" alt="Activities">
+      <img src="Pics/Converted/eat.jpg" alt="Activities">
+      <img src="Pics/Converted/BothPlay2.png" alt="Activities">
+      <img src="Pics/Converted/food.jpg" alt="Activities">
+      <img src="Pics/Converted/food1.jpg" alt="Activities">
+      <img src="Pics/Converted/fun.jpg" alt="Activities">
+      <img src="Pics/Converted/fun2.jpg" alt="Activities">
+      <img src="Pics/Converted/JasonPlay3.jpg" alt="Activities">
+      <img src="Pics/Converted/play.jpg" alt="Activities">
+      <img src="Pics/Converted/play1.jpg" alt="Activities">
+      <img src="Pics/Converted/play2.jpg" alt="Activities">
+      <img src="Pics/Converted/ply.jpg" alt="Activities">
+      <img src="Pics/Converted/Reading.jpg" alt="Activities">
+      <img src="Pics/Converted/Reading1.jpg" alt="Activities">
+      <img src="Pics/Converted/Reading2.jpg" alt="Activities">
+      <img src="Pics/Converted/Reading3.jpg" alt="Activities">
+      <img src="Pics/Converted/study.jpg" alt="Activities">
+      
 
+
+    </div>
+  </section>
+
+  <!-- Contact -->
   <section id="contact">
     <h2>Contact Us</h2>
     <p>📍 18146 Camdenhurst Dr, Gainesville, VA 20155</p>
-    <p>📞 (571)528-7232</p>
+    <p>📞 (571) 528-7232</p>
     <p>📧 minniesdaycare79@gmail.com</p>
 
-    <h3>Inquiry / Registration Form</h3>
-    <form action="https://formspree.io/f/mqabggeo" method="post" style="max-width: 500px; margin-top: 1rem;">
-    <label for="parentName">Parent's Name:</label><br />
-    <input type="text" id="parentName" name="parentName" required /><br /><br />
+    <form action="https://formspree.io/f/mqabggeo" method="POST">
+      <label>Parent's Name:</label>
+      <input type="text" name="parentName" required>
 
-    <label for="childName">Child's Name:</label><br />
-    <input type="text" id="childName" name="childName" required /><br /><br />
+      <label>Child's Name:</label>
+      <input type="text" name="childName" required>
 
-    <label for="childAge">Child's Age (Years):</label><br />
-    <input type="number" id="childAge" name="childAge" min="1" max="12" required /><br /><br />
-    <label for="InfantAge">Infant's Age (3 Months and above):</label><br />
-    <input type="number" id="InfantAge" name="InfantAge" min="3" max="11" required /><br /><br />
+      <label>Child's Age:</label>
+      <input type="number" name="childAge" min="1" max="12" required>
 
-    <label for="email">Email:</label><br />
-    <input type="email" id="email" name="email" required /><br /><br />
+      <label>Email:</label>
+      <input type="email" name="email" required>
 
-    <label for="message">Message:</label><br />
-    <textarea id="message" name="message" rows="4" required></textarea><br /><br />
+      <label>Message:</label>
+      <textarea name="message" rows="4" required></textarea>
 
-    <button type="submit">Submit</button>
-   
-  </form>
-
-
- 
+      <button type="submit">Submit</button>
+    </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Minnie's Home Day Care.</p>
+    <p>&copy; 2025 Minnie's Home Day Care. All Rights Reserved.</p>
   </footer>
- <form action="https://formspree.io/f/mqabggeo" method="POST" style="max-width: 500px; margin-top: 1rem;">
-  <!-- Redirect to Thank You page -->
-  <input type="hidden" name="_redirect" value="thank-you.html">
 
-  <!-- The rest of your form fields... -->
-   </form>
 </body>
 </html>
